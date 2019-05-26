@@ -1,15 +1,42 @@
+header {
+    .navbar-brand {
+        img {
+            height: 30px;
+            padding: 5px;
+        }
+    }
+    .navbar-nav {
+        margin-left: auto;
+    }
+}
+
 .jumbotron {
+    border-radius: 0;
+    height: 400px;
+    background-image: url("../img/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
     padding-top: 3rem;
     padding-bottom: 3rem;
     margin-bottom: 0;
     background-color: #fff;
+    color: white;
     p:last-child {
         margin-bottom: 0;
+
     }
     .container {
         max-width: 40rem;
     }
+    .jumbotron-content {
+        background-color: rgba(0, 0, 0, 0.3);
+        padding: 20px;
+        .jumbotron-heading {
+            font-weight: 300;
+        }
+    }
 }
+
 @media (min-width: 768px) {
     .jumbotron {
         padding-top: 6rem;
@@ -17,9 +44,7 @@
     }
 }
 
-.jumbotron-heading {
-    font-weight: 300;
-}
+
 
 footer {
     padding-top: 3rem;
