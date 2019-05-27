@@ -28,9 +28,18 @@
 
         <form>
             <div class="form-group row">
-                <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+                <label for="staticEmail" class="col-sm-2 col-form-label">Wybierz kierowce</label>
                 <div class="col-sm-10">
-                    <input type="text" class="form-control" id="staticEmail" placeholder="email@example.com">
+                    <select class="form-control" id="exampleFormControlSelect1">
+                        <?php
+                        include_once("db_connect.php");
+                        $sql = "SELECT id, name, surname FROM drivers";
+                        $resultset = mysqli_query($conn, $sql) or die("database error:". mysqli_error($conn));
+                        while( $record = mysqli_fetch_assoc($resultset) ) {
+                            ?>
+                            <option value="<?php echo $record['id']; ?>"><?php echo $record['name']; ?> <?php echo $record['surname']; ?></option>
+                        <?php } ?>
+                    </select>
                 </div>
             </div>
             <div class="form-group row">
@@ -41,13 +50,7 @@
             </div>
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Example select</label>
-                <select class="form-control" id="exampleFormControlSelect1">
-                    <option>1</option>
-                    <option>2</option>
-                    <option>3</option>
-                    <option>4</option>
-                    <option>5</option>
-                </select>
+
             </div>
             <div class="form-group">
                 <label for="exampleFormControlSelect2">Example multiple select</label>
