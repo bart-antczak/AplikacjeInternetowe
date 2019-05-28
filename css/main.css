@@ -8,6 +8,9 @@ header .navbar-nav {
   width: 100%;
   height: 300px; }
 
+#send-answer {
+  text-align: center; }
+
 .jumbotron {
   border-radius: 0;
   height: 400px;
