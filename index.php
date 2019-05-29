@@ -28,9 +28,9 @@
             <input type="hidden" name="destination" value="<?php echo $_SERVER["REQUEST_URI"]; ?>"/>
 
             <div class="form-group row">
-                <label for="driver" class="col-sm-4 col-form-label">Wybierz zwycięzce</label>
-                <div class="col-sm-8">
+                <div class="col-sm-12">
                     <select class="form-control" id="driver" name="driver">
+                        <option value="0" selected="selected">Wybierz zwycięskiego kierowcę</option>
                         <?php
                         include_once("db_connect.php");
                         $sql = "SELECT id, name, surname FROM drivers";
@@ -44,9 +44,9 @@
             </div>
 
             <div class="form-group row">
-                <label for="team" class="col-sm-4 col-form-label">Który zespół osiągnie zwycięstwo</label>
-                <div class="col-sm-8">
+                <div class="col-sm-12">
                     <select class="form-control" id="team" name="team">
+                        <option value="0" selected="selected">Wybierz zwycięski zespół</option>
                         <?php
                         include_once("db_connect.php");
                         $sql = "SELECT id, name FROM teams";
@@ -60,7 +60,7 @@
             </div>
 
             <div id="send-answer">
-                <button type="submit" class="btn btn-secondary">Wyślij</button>
+                <button type="submit" class="btn btn-secondary">Oddaj głos</button>
             </div>
 
         </form>

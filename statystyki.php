@@ -124,7 +124,7 @@
 <?php include("includes/footer.php");?>
 <?php include("includes/scripts.php");?>
 
-<script>
+<script type="application/javascript">
     $(document).ready(function () {
         setTimeout(function() {
             $("#success-alert").slideUp(500);

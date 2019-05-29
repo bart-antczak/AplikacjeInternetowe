@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Czas generowania: 29 Maj 2019, 21:16
+-- Czas generowania: 29 Maj 2019, 22:03
 -- Wersja serwera: 5.7.26-0ubuntu0.18.04.1
 -- Wersja PHP: 7.2.17-0ubuntu0.18.04.1
 
@@ -48,7 +48,7 @@ INSERT INTO `drivers` (`id`, `name`, `surname`, `team`, `nationality`, `image`) 
 (6, 'Pierre', 'Gasly', '3', 'Francja', 'img/drivers/Pierre-Gasly.jpg'),
 (7, 'Carlos', 'Sainz Jr.', '4', 'Finlandia', 'img/drivers/Carlos-Sainz.jpg'),
 (8, 'Kevin', 'Magnussen', '5', 'Dania', 'img/drivers/Kevin-Magnussen.jpg'),
-(9, 'Sergio', 'Pérez', '6', 'Meksyk', 'img/drivers/Sergio-Perez.jpg'),
+(9, 'Sergio', 'Perez', '6', 'Meksyk', 'img/drivers/Sergio-Perez.jpg'),
 (10, 'Kimi', 'Raikkonen', '7', 'Finlandia', 'img/drivers/Kimi-Raikkonen.jpg'),
 (11, 'Lando', 'Norris', '4', 'Wielka Brytania', 'img/drivers/Lando-Norris.jpg'),
 (12, 'Daniil', 'Kvyat', '9', 'Rosja', 'img/drivers/Daniil-Kvyat.jpg'),
@@ -90,7 +90,9 @@ INSERT INTO `drivers_answers` (`id`, `driver_id`) VALUES
 (11, 1),
 (12, 1),
 (13, 1),
-(14, 1);
+(14, 1),
+(15, 20),
+(16, 1);
 
 -- --------------------------------------------------------
 
@@ -148,7 +150,9 @@ INSERT INTO `teams_answers` (`id`, `team_id`) VALUES
 (11, '6'),
 (12, '1'),
 (13, '1'),
-(14, '1');
+(14, '1'),
+(15, '1'),
+(16, '1');
 
 --
 -- Indeksy dla zrzutów tabel
@@ -191,7 +195,7 @@ ALTER TABLE `drivers`
 -- AUTO_INCREMENT dla tabeli `drivers_answers`
 --
 ALTER TABLE `drivers_answers`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT dla tabeli `teams`
 --
@@ -201,7 +205,7 @@ ALTER TABLE `teams`
 -- AUTO_INCREMENT dla tabeli `teams_answers`
 --
 ALTER TABLE `teams_answers`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -8,12 +8,12 @@ wykorzystującej bazę danych MySQL
 
 W projekcie na wybrany temat powinny znaleźć się następujące elementy:
 - dokumentacja projektu 
-	* wprowadzenie
-	* wykaz plików
-	* użyte metody informatyczne
-	* przykładowe screenshoty 
-	* zastosowanie 
-	* możliwości rozbudowy
+	* wprowadzenie ✓
+	* wykaz plików ✓
+	* użyte metody informatyczne ✓
+	* przykładowe screenshoty  ✓
+	* zastosowanie  ✓
+	* możliwości rozbudowy ✓
 
 - pliki HTML, CSS, PHP, JS
 	* plik główny INDEX ✓
