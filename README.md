@@ -8,7 +8,7 @@ wykorzystującej bazę danych MySQL
 
 W projekcie na wybrany temat powinny znaleźć się następujące elementy:
 - dokumentacja projektu 
-	* wprowadzenie ✓
+	* wprowadzenie
 	* wykaz plików
 	* użyte metody informatyczne
 	* przykładowe screenshoty 
@@ -16,20 +16,20 @@ W projekcie na wybrany temat powinny znaleźć się następujące elementy:
 	* możliwości rozbudowy
 
 - pliki HTML, CSS, PHP, JS
-	* plik główny INDEX
-	* pliki dodatkowe
-	* pliki arkuszy
-	* pliki skryptów
-	* wyeksportowane bazy danych do standardu  ODS
+	* plik główny INDEX ✓
+	* pliki dodatkowe ✓
+	* pliki arkuszy ✓
+	* pliki skryptów ✓
+	* wyeksportowane bazy danych do standardu  ODS ✓
 	
 - pliki pomocnicze
-	* dodatkowe używaqne programy
-	* pliki graficzne 
-	* pliki dzwiekowe itp
+	* dodatkowe używaqne programy ✓
+	* pliki graficzne ✓ 
+	* pliki dzwiekowe itp ✓
 
 - bazy danych 
     * wyeksportowane bazy danych do SQLa 
-	  zawierajĻce co najmniej 10 rekordůw 	
+	  zawierajĻce co najmniej 10 rekordůw ✓ 	
 
 Spakowany projekt umieszczamy na GOOGLU 
 Tworzymy folder o nazwie "prog nazwisko imiÍ"
@@ -38,6 +38,4 @@ i udostepniamy dla: dariusz.kessel@gmail.com
 
 Tworzymy serwis na CBA lub HOSTINGER
 o nazwie WSB_imienazwisko
-i tam umieszczamy dzia≥ajĻcy projekt	
-
-### Dokumentacja
+i tam umieszczamy dzia≥ajĻcy projekt
