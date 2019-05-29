@@ -1,15 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.8.5
+-- version 4.6.6deb5
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Czas generowania: 29 Maj 2019, 18:45
--- Wersja serwera: 8.0.15
--- Wersja PHP: 7.2.15
+-- Host: localhost:3306
+-- Czas generowania: 29 Maj 2019, 21:16
+-- Wersja serwera: 5.7.26-0ubuntu0.18.04.1
+-- Wersja PHP: 7.2.17-0ubuntu0.18.04.1
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
-SET AUTOCOMMIT = 0;
-START TRANSACTION;
 SET time_zone = "+00:00";
 
 
@@ -32,8 +30,8 @@ CREATE TABLE `drivers` (
   `id` int(11) NOT NULL,
   `name` varchar(15) COLLATE utf8mb4_polish_ci NOT NULL,
   `surname` varchar(15) COLLATE utf8mb4_polish_ci NOT NULL,
-  `team` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_polish_ci NOT NULL,
-  `nationality` varchar(30) CHARACTER SET utf8mb4 COLLATE utf8mb4_polish_ci NOT NULL,
+  `team` varchar(30) COLLATE utf8mb4_polish_ci NOT NULL,
+  `nationality` varchar(30) COLLATE utf8mb4_polish_ci NOT NULL,
   `image` varchar(50) COLLATE utf8mb4_polish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_polish_ci ROW_FORMAT=COMPACT;
 
@@ -51,12 +49,12 @@ INSERT INTO `drivers` (`id`, `name`, `surname`, `team`, `nationality`, `image`) 
 (7, 'Carlos', 'Sainz Jr.', '4', 'Finlandia', 'img/drivers/Carlos-Sainz.jpg'),
 (8, 'Kevin', 'Magnussen', '5', 'Dania', 'img/drivers/Kevin-Magnussen.jpg'),
 (9, 'Sergio', 'Pérez', '6', 'Meksyk', 'img/drivers/Sergio-Perez.jpg'),
-(10, 'Kimi', 'Räikkönen', '7', 'Finlandia', 'img/drivers/Kimi-Raikkonen.jpg'),
+(10, 'Kimi', 'Raikkonen', '7', 'Finlandia', 'img/drivers/Kimi-Raikkonen.jpg'),
 (11, 'Lando', 'Norris', '4', 'Wielka Brytania', 'img/drivers/Lando-Norris.jpg'),
 (12, 'Daniil', 'Kvyat', '9', 'Rosja', 'img/drivers/Daniil-Kvyat.jpg'),
 (13, 'Daniel', 'Ricciardo', '8', 'Australia', 'img/drivers/Daniel-Ricciardo.jpg'),
 (14, 'Alexander', 'Albon', '9', 'Tajlandia', 'img/drivers/Alexander-Albon.jpg'),
-(15, 'Nico', 'Hülkenberg', '8', 'Niemcy', 'img/drivers/Nico-Hulkenberg.jpg'),
+(15, 'Nico', 'Hulkenberg', '8', 'Niemcy', 'img/drivers/Nico-Hulkenberg.jpg'),
 (16, 'Lance', 'Stroll', '6', 'Kanada', 'img/drivers/Lance-Stroll.jpg'),
 (17, 'Romain', 'Grosjean', '5', 'Francja', 'img/drivers/Romain-Grosjean.jpg'),
 (18, 'Antonio', 'Giovinazzi', '7', 'Włochy', 'img/drivers/Antonio-Giovinazzi.jpg'),
@@ -90,7 +88,9 @@ INSERT INTO `drivers_answers` (`id`, `driver_id`) VALUES
 (9, 8),
 (10, 1),
 (11, 1),
-(12, 1);
+(12, 1),
+(13, 1),
+(14, 1);
 
 -- --------------------------------------------------------
 
@@ -127,7 +127,7 @@ INSERT INTO `teams` (`id`, `name`) VALUES
 
 CREATE TABLE `teams_answers` (
   `id` int(10) NOT NULL,
-  `team_id` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_polish_ci NOT NULL
+  `team_id` varchar(50) COLLATE utf8mb4_polish_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_polish_ci;
 
 --
@@ -146,32 +146,34 @@ INSERT INTO `teams_answers` (`id`, `team_id`) VALUES
 (9, '3'),
 (10, '1'),
 (11, '6'),
-(12, '1');
+(12, '1'),
+(13, '1'),
+(14, '1');
 
 --
 -- Indeksy dla zrzutów tabel
 --
 
 --
--- Indeksy dla tabeli `drivers`
+-- Indexes for table `drivers`
 --
 ALTER TABLE `drivers`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeksy dla tabeli `drivers_answers`
+-- Indexes for table `drivers_answers`
 --
 ALTER TABLE `drivers_answers`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeksy dla tabeli `teams`
+-- Indexes for table `teams`
 --
 ALTER TABLE `teams`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indeksy dla tabeli `teams_answers`
+-- Indexes for table `teams_answers`
 --
 ALTER TABLE `teams_answers`
   ADD PRIMARY KEY (`id`);
@@ -185,26 +187,21 @@ ALTER TABLE `teams_answers`
 --
 ALTER TABLE `drivers`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=21;
-
 --
 -- AUTO_INCREMENT dla tabeli `drivers_answers`
 --
 ALTER TABLE `drivers_answers`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT dla tabeli `teams`
 --
 ALTER TABLE `teams`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
-
 --
 -- AUTO_INCREMENT dla tabeli `teams_answers`
 --
 ALTER TABLE `teams_answers`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
-COMMIT;
-
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
