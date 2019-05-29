@@ -13,6 +13,6 @@
     mysqli_query($conn, $sql_driver) or die("database error:". mysqli_error($conn));
 
     $Message = 'Odpowiedź dodana do bazy!';
-    header("Location: index.php?Message={$Message}");
+    header("Location: statystyki.php?Message={$Message}");
 
 ?>

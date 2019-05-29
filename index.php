@@ -23,20 +23,6 @@
   <div class="album py-5 bg-light">
     <div class="container">
 
-        <div class="alert alert-success" id="success-alert">
-            <button type="button" class="close" data-dismiss="alert">x</button>
-
-            <?php
-                if( !empty( $_REQUEST['Message'] ) )
-                {
-                    echo sprintf( '<p>%s</p>', $_REQUEST['Message'] );
-                }
-            ?>
-
-        </div>
-
-
-
         <form action="answer.php" method="post">
 
             <input type="hidden" name="destination" value="<?php echo $_SERVER["REQUEST_URI"]; ?>"/>
@@ -84,18 +70,8 @@
 
 </main>
 
-
-
 <?php include("includes/footer.php");?>
 <?php include("includes/scripts.php");?>
-
-<script>
-    $(document).ready(function () {
-        setTimeout(function() {
-            $("#success-alert").slideUp(500);
-        }, 3000)
-    });
-</script>
 
 </body>
 </html>
